@@ -34,7 +34,8 @@ def app():
             for res in result :
                 if st.session_state["id"] == res["id"]:
                     a += 1
-                    st.markdown(f"<h1 style='background-color : grey ; border-radius : 30px ; margin:10px'><i style='background-color:blue ; border-radius:10px; padding-right:50px '>{a}.</i>{res["tasks"]}</h1>" , unsafe_allow_html=True)
+                    # st.markdown(f"<h1 style='background-color : grey ; border-radius : 30px ; margin:10px'><i style='background-color:blue ; border-radius:10px; padding-right:50px '>{a}.</i>{res["tasks"]}</h1>" , unsafe_allow_html=True)
+                    st.header(f"{a}.{res["tasks"]}")
                     st.button("Delete Task" , id(a) , on_click=d , args=([res["_id"]]))
                         
     except:
