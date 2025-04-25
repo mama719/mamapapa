@@ -1,2 +1,0 @@
-# mamapapa
-mama papa
