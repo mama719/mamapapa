@@ -3,7 +3,10 @@ import firebase_admin
 from firebase_admin import credentials , auth 
 
 cred = credentials.Certificate("pondering-f2e35-5641dcd7b06f.json")
-# firebase_admin.initialize_app(cred)
+try:
+    firebase_admin.initialize_app(cred)
+except :
+    pass
 
 username = st.text_input("Name")
 email = st.text_input("Email")
